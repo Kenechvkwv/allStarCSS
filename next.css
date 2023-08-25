@@ -76,7 +76,7 @@ header {
   font-weight: bold;
   font-size: 1em;
   display: block;
-  cursor: pointer;
+  cursor: url('./assets/custom-cursor.png'),pointer ;
   margin: 20px auto;
 }
 
@@ -141,4 +141,6 @@ header {
   background-color: var(--secondary-color);
   transform: rotateY(180deg);
 }
+
+
 
