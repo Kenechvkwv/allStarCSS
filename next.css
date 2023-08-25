@@ -87,15 +87,58 @@ header {
 
 .pseudo-section {
   position: relative;
+  margin: 0 20px;
+  padding: 1em;
+  text-align: center;
+
 }
 
-.pseudo-section::before {
+.pseudo-section::before{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--tertiary-color);
   z-index: -1;
+  border-radius: 40px;
 }
+
+
+.card {
+  perspective: 1000px;
+  margin: 30px 0;
+  display: grid;
+  justify-items: center;
+}
+
+.card-inner{
+  width: 200px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:hover .card-inner{
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+  width: 100%;
+  height:100%;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-front{
+  background-color: var(--primary-color);
+}
+
+.card-back {
+  background-color: var(--secondary-color);
+  transform: rotateY(180deg);
+}
+
