@@ -15,13 +15,13 @@ header {
   padding: 1rem;
 }
 
-main {
+main .section1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   justify-items: center;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: #c7e8fb;
 }
 
 .box {
@@ -70,6 +70,45 @@ main {
 
 .pulse-box {
   animation: pulse 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce-box {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.section2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  background-color: #c7e8fb;
+}
+.goodbye-box {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.goodbye-box h2 {
+  font-size: 30px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 footer {
