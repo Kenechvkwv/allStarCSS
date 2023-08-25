@@ -144,7 +144,7 @@ header {
 
 .slider-container {
   margin: 0px 10px;
-  width: 300px;
+  
   transition: background-color 0.3s;
 }
 
@@ -196,4 +196,40 @@ header {
   transform: translateX(20px);
 }
 
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  margin: 40px auto;
+  display: grid;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  width: 40%;
+  padding: 2em;
+  border-radius: 20px;
+}
 
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
