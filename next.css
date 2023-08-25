@@ -142,5 +142,58 @@ header {
   transform: rotateY(180deg);
 }
 
+.slider-container {
+  margin: 0px 10px;
+  width: 300px;
+  transition: background-color 0.3s;
+}
+
+.slider {
+  width: 100%;
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+  appearance: none;
+  height: 8px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  margin-right: 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle.active {
+  background-color: #27ae60;
+}
+
+.toggle-handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+.toggle.active .toggle-handle {
+  transform: translateX(20px);
+}
 
 
