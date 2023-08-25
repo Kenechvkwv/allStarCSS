@@ -63,7 +63,7 @@ main .section1 {
   }
   50% {
     transform: scale(1.1);
-    background-color: #f9ca24;
+    background-color: var(--secondary-color);
     color: white;
   }
 }
